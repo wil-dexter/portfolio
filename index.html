@@ -1,0 +1,76 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Minga — Portfolio</title>
+    <style>
+        :root { --bg:#f7f7fb; --card:#fff; --accent:#0a74da; --text:#111; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+        html,body { height:100%; margin:0; background:var(--bg); color:var(--text); }
+        .wrap { max-width:900px; margin:40px auto; padding:24px; }
+        header { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+        h1 { margin:0; font-size:1.25rem; }
+        nav a { color:var(--accent); text-decoration:none; margin-left:12px; font-weight:600; }
+        .card { background:var(--card); border-radius:12px; padding:20px; box-shadow:0 6px 18px rgba(12,20,40,.06); margin-top:18px; }
+        .grid { display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
+        .project { padding:14px; border-radius:8px; background:linear-gradient(180deg, rgba(10,116,218,.04), transparent); }
+        footer { text-align:center; color:#666; font-size:.9rem; margin-top:26px; }
+        a.button { display:inline-block; padding:8px 12px; background:var(--accent); color:#fff; border-radius:8px; text-decoration:none; font-weight:600; }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+
+        <header>
+            <div>
+                <h1>Minga</h1>
+                <div style="color:#666;font-size:.95rem">Frontend Developer • Portfolio</div>
+            </div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section id="about" class="card">
+            <h2 style="margin-top:0">About</h2>
+            <p>Simple, responsive portfolio template. Replace this text with a short bio describing your skills, tools, and interests.</p>
+            <p><a class="button" href="#projects">See projects</a></p>
+        </section>
+
+        <section id="projects" class="card">
+            <h2 style="margin-top:0">Projects</h2>
+            <div class="grid">
+                <article class="project">
+                    <strong>Project One</strong>
+                    <p style="margin:.5rem 0 0">A short description of the project. Tech stack: HTML, CSS, JS.</p>
+                </article>
+                <article class="project">
+                    <strong>Project Two</strong>
+                    <p style="margin:.5rem 0 0">A short description of another project. Link or repo goes here.</p>
+                </article>
+                <article class="project">
+                    <strong>Project Three</strong>
+                    <p style="margin:.5rem 0 0">A short description. Replace with your own projects.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="card">
+            <h2 style="margin-top:0">Contact</h2>
+            <p>You can reach me at <a href="mailto:you@example.com">you@example.com</a> or link to social profiles.</p>
+        </section>
+
+        <footer>
+            © <span id="year"></span> Leticia — Built with a simple HTML template
+        </footer>
+    </div>
+
+    <script>
+        // small helpers
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
