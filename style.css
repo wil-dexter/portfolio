@@ -15,12 +15,14 @@
 html,body{
   height:100%;
   margin:0;
+  /* lighter overlay so the background image is more visible */
   background: 
-    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
     url('https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?fm=jpg&q=80&w=2000&fit=crop');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   color:var(--accent-neutral);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -32,17 +34,25 @@ html,body{
   padding:28px;
 }
 
+/* Center header/title and stack nav for a clean, centered layout */
 header{
   display:flex;
+  flex-direction:column;
   align-items:center;
-  justify-content:space-between;
-  gap:20px;
+  justify-content:center;
+  gap:10px;
+  padding-top:8px;
+  text-align:center;
 }
 
-h1{margin:0;font-size:1.25rem}
+h1{margin:0;font-size:1.6rem;text-align:center}
 
-nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600;transition:color .18s}
-nav a:hover{color:var(--accent)}
+/* make inline subtitle styles consistent and visible on dark background */
+header .subtitle{color:var(--muted) !important;font-size:.95rem}
+
+nav{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+nav a{color:var(--muted);text-decoration:none;margin-left:0;padding:6px 8px;border-radius:8px;font-weight:600;transition:color .18s,background .12s}
+nav a:hover{color:var(--white);background:rgba(255,255,255,0.03)}
 
 .card{background: rgba(255,255,255,0.02);border-radius:var(--radius);padding:22px;box-shadow:0 8px 30px rgba(0,0,0,0.6);margin-top:20px;border:1px solid rgba(255,255,255,0.03)}
 
@@ -92,7 +102,7 @@ footer{margin-top:36px;text-align:center;color:var(--muted);font-size:.95rem}
 /* Section-specific color accents: use left border + subtle top bar */
 section#about.card{border-left:8px solid var(--light-green)}
 section#projects.card{border-left:8px solid var(--sky-blue)}
-section#gallery.card{border-left:8px solid var(--white)}
+section#gallery.card{border-right:8px solid var(--white)}
 section#videos.card{border-left:8px solid var(--light-green)}
 section#contact.card{border-left:8px solid var(--sky-blue)}
 
