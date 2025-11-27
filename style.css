@@ -55,6 +55,18 @@ footer{margin-top:36px;text-align:center;color:var(--muted);font-size:.95rem}
 a.button{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#061223;font-weight:700;text-decoration:none;transition:transform .18s}
 a.button:hover{transform:scale(1.05)}
 
+.gallery-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+
+.gallery-item{overflow:hidden;border-radius:12px;border:1px solid rgba(255,255,255,0.03);transition:transform .18s}
+.gallery-item img{width:100%;height:auto;display:block;transition:transform .3s}
+.gallery-item:hover img{transform:scale(1.05)}
+
+.videos-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+
+.video-item{border-radius:12px;border:1px solid rgba(255,255,255,0.03);overflow:hidden;transition:box-shadow .18s}
+.video-item:hover{box-shadow:0 20px 40px rgba(2,6,23,0.6)}
+.video-item iframe{display:block}
+
 @media (max-width:720px){
   .wrap{padding:18px;margin:28px auto}
   nav a{margin-left:10px}
