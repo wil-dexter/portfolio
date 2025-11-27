@@ -15,7 +15,12 @@
 html,body{
   height:100%;
   margin:0;
-  background: var(--bg);
+  background: 
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url('https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?fm=jpg&q=80&w=2000&fit=crop');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
   color:var(--accent-neutral);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
